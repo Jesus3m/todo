@@ -9,7 +9,7 @@
     "migrate:db": "npm run build && cross-env NODE_ENV=production npm run migration:dir",
     "migration:dir": "node migrations.js",
     "dev": "npm run migrate:db && cross-env NODE_ENV=development npx sequelize-cli db:migrate && cross-env NODE_ENV=development npm run migration:dir && cross-env NODE_ENV=development node_modules/.bin/ts-node-dev --respawn --notify false --prefer-ts --ignore-watch node_modules -- src/index.ts ",
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "npm uninstall bcrypt && npm install bcrypt && npm run migrate:db && NODE_ENV=production npx sequelize-cli db:migrate && NODE_ENV=production node dist/index.js"
   },
   "keywords": [],
