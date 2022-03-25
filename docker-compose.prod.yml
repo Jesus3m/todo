@@ -13,8 +13,8 @@ services:
         # condition: service_healthy
       - "redis"
         # condition: service_healthy
-    volumes:
-      - './todo-api:/usr/src/app/server'
+    # volumes:
+    #   - './todo-api:/usr/src/app/server'
 
   todo-front:
     image: jesus03m/todofront

@@ -2,7 +2,7 @@ FROM node:lts-alpine
 ENV NODE_ENV=development
 WORKDIR /usr/src/app/server
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN yarn install --silent && mv node_modules ../
+RUN yarn install --silent
 COPY . .
 EXPOSE 5000
 RUN chown -R node /usr/src/app/server
