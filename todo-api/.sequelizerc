@@ -1,0 +1,34 @@
+const path = require("path");
+
+require("babel-register");
+
+module.exports = {
+  config: path.resolve(
+    "dist",
+    "config",
+    "connections",
+    "sequelize",
+    "config.json"
+  ),
+  "models-path": path.resolve(
+    "dist",
+    "config",
+    "connections",
+    "sequelize",
+    "models"
+  ),
+  "seeders-path": path.resolve(
+    "dist",
+    "config",
+    "connections",
+    "sequelize",
+    "seeders"
+  ),
+  "migrations-path": path.resolve(
+    "dist",
+    "config",
+    "connections",
+    "sequelize",
+    "migrations"
+  ),
+};
